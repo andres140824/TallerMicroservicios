@@ -1,0 +1,147 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f6f6f6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+}
+
+main {
+    width: 90%;
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+.task-form, .task-list {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.task-form h2, .task-list h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #4CAF50;
+    font-size: 28px;
+}
+
+.task-form div {
+    margin-bottom: 20px;
+}
+
+.task-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #333;
+}
+
+.task-form input, .task-form textarea, .task-form select, .task-form button {
+    width: calc(100% - 22px);
+    padding: 12px;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.task-form input:focus, .task-form textarea:focus, .task-form select:focus {
+    outline: none;
+    border-color: #45a049;
+}
+
+.task-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.task-form button:hover {
+    background-color: #45a049;
+}
+
+.task-list #filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.task-list #filters label {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+.task-list #filters select {
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 2px solid #4CAF50;
+}
+
+.task-list .task {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.task-list .task.pending {
+    border-left: 5px solid #ffc107;
+}
+
+.task-list .task.in-process {
+    border-left: 5px solid #2196F3;
+}
+
+.task-list .task.completed {
+    border-left: 5px solid #4CAF50;
+}
+
+.task-list .task.blocked {
+    border-left: 5px solid #f44336;
+}
+
+.task-list .task-details {
+    flex-grow: 1;
+}
+
+.task-list .task-actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.task-list .task-actions .edit {
+    background-color: #ffc107;
+    color: white;
+}
+
+.task-list .task-actions .delete {
+    background-color: #f44336;
+    color: white;
+}
+
+.task-list .task-actions button:hover {
+    opacity: 0.8;
+}

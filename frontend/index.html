@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Tareas</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Tareas</h1>
+    </header>
+    <main>
+        <section class="task-form">
+            <h2>Crear Tarea</h2>
+            <form id="taskForm">
+                <div>
+                    <label for="titulo">Título:</label>
+                    <input type="text" id="titulo" name="titulo" required>
+                </div>
+                <div>
+                    <label for="descripcion">Descripción:</label>
+                    <textarea id="descripcion" name="descripcion" required></textarea>
+                </div>
+                <div>
+                    <label for="prioridad">Prioridad:</label>
+                    <select id="prioridad" name="prioridad" required>
+                        <option value="Alta">Alta</option>
+                        <option value="Media">Media</option>
+                        <option value="Baja">Baja</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="responsable">Responsable:</label>
+                    <input type="text" id="responsable" name="responsable" required>
+                </div>
+                <div>
+                    <label for="fechaEstimada">Fecha Estimada de Finalización:</label>
+                    <input type="date" id="fechaEstimada" name="fechaEstimada" required>
+                </div>
+                <button type="submit">Crear Tarea</button>
+            </form>
+        </section>
+        <section class="task-list">
+            <h2>Lista de Tareas</h2>
+            <div id="filters">
+                <label for="filterPriority">Filtrar por Prioridad:</label>
+                <select id="filterPriority">
+                    <option value="">Todas</option>
+                    <option value="Alta">Alta</option>
+                    <option value="Media">Media</option>
+                    <option value="Baja">Baja</option>
+                </select>
+                <label for="filterState">Filtrar por Estado:</label>
+                <select id="filterState">
+                    <option value="">Todos</option>
+                    <option value="Pendiente">Pendiente</option>
+                    <option value="En Proceso">En Proceso</option>
+                    <option value="Terminada">Terminada</option>
+                    <option value="En Impedimento">En Impedimento</option>
+                </select>
+            </div>
+            <div id="tasks">
+                <!-- Aquí se mostrarán las tareas -->
+            </div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

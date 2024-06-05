@@ -1,0 +1,15 @@
+### Crear una nueva tarea ###
+POST http://localhost:8000/api/tasks
+Content-Type: application/json
+
+{
+    "title": "Nueva Tarea",
+    "description": "Descripción de la nueva tarea",
+    "created_by": "Usuario",
+    "estimated_completion_date": "2024-06-01",
+    "priority": "alta",
+    "responsible": "Responsable"
+}
+
+### Obtener todas las tareas ###
+GET http://localhost:8000/api/tasks
